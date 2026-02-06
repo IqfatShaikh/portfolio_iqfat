@@ -134,15 +134,15 @@ export default function SkillsSection() {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          // Animate cards one by one
+          // Animate cards one by one with faster timing
           skills.forEach((skill, index) => {
             setTimeout(() => {
               setAnimatedCards(prev => [...prev, index]);
-            }, skill.delay);
+            }, index * 80); // Faster animation - 80ms between each
           });
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.1 } // Earlier trigger
     );
 
     if (sectionRef.current) {
@@ -375,16 +375,7 @@ export default function SkillsSection() {
           </div>
         </div>
 
-        {/* Animated instruction text */}
-        <div className={`text-center mt-12 transition-all duration-1000 delay-1000 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
-        }`}>
-          <p className="text-slate-400 text-sm animate-pulse">
-            <span className="inline-block animate-bounce mr-2">👆</span>
-            Hover over each skill to see more details
-            <span className="inline-block animate-bounce ml-2">✨</span>
-          </p>
-        </div>
+        {/* Animated instruction text - REMOVED */}
       </div>
     </section>
   );

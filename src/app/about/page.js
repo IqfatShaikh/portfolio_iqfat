@@ -47,21 +47,54 @@ export default function About() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Enhanced Hero Section with Visual Elements - Full Screen */}
           <div className="min-h-screen flex items-center justify-center -mt-20 pt-20">
-            <div className="grid lg:grid-cols-2 gap-12 items-center w-full relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full relative z-10">
               {/* Left side - Title and Description aligned exactly under navbar "Iqfat" */}
-              <div className="text-left max-w-2xl" style={{ marginLeft: '0' }}>
+              <div className="text-left max-w-2xl order-1 lg:order-1" style={{ marginLeft: '0' }}>
                 <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                  <div className="mb-6">
-                    <span className="px-4 py-2 bg-slate-800 border border-blue-400/50 rounded-full text-blue-400 text-sm font-medium">
-                      Frontend Developer || B.Voc in AI & ML
-                    </span>
-                  </div>
                   <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 leading-tight">
                     <span className="text-slate-300 block text-lg md:text-xl lg:text-2xl font-medium">Hello, I'm</span>
                     <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent animate-gradient-x whitespace-nowrap">
                       Iqfat Shaikh
                     </span>
                   </h1>
+                </div>
+                
+                {/* Profile Picture - Only visible on mobile, between heading and badge */}
+                <div className={`lg:hidden flex items-center justify-center relative transition-all duration-1000 delay-300 mb-8 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                  <div className="relative">
+                    {/* Profile picture container with enhanced glow */}
+                    <div className="relative w-64 h-64">
+                      {/* Enhanced glowing background */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/30 via-purple-500/30 to-cyan-500/30 rounded-full blur-3xl animate-pulse"></div>
+                      
+                      {/* Animated rotating border */}
+                      <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 animate-spin-slow opacity-75"></div>
+                      
+                      {/* Inner container */}
+                      <div className="absolute inset-2 bg-gradient-to-br from-slate-700 to-slate-800 rounded-full flex items-center justify-center overflow-hidden">
+                        {/* Placeholder content */}
+                        <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-900/50 to-purple-900/50">
+                          <div className="text-center">
+                            <div className="text-6xl mb-2">👨‍💻</div>
+                            <div className="text-slate-300 text-sm font-medium">That's Me!</div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Floating particles */}
+                      <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-500 rounded-full animate-bounce opacity-60"></div>
+                      <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-purple-500 rounded-full animate-bounce delay-300 opacity-60"></div>
+                      <div className="absolute top-1/2 -right-6 w-4 h-4 bg-cyan-500 rounded-full animate-ping opacity-60"></div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className={`transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                  <div className="mb-6">
+                    <span className="px-4 py-2 bg-slate-800 border border-blue-400/50 rounded-full text-blue-400 text-sm font-medium">
+                      Frontend Developer || B.Voc in AI & ML
+                    </span>
+                  </div>
                 </div>
                 <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                   <p className="text-lg text-slate-400 max-w-2xl mb-10 leading-relaxed">
@@ -121,8 +154,8 @@ export default function About() {
                 </div>
               </div>
 
-              {/* Right side - Profile Picture with enhanced styling */}
-              <div className={`flex items-center justify-center relative transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              {/* Right side - Profile Picture with enhanced styling - Only visible on desktop */}
+              <div className={`hidden lg:flex items-center justify-center relative transition-all duration-1000 delay-500 order-2 lg:order-2 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <div className="relative">
                   {/* Profile picture container with enhanced glow */}
                   <div className="relative w-80 h-80">
@@ -132,7 +165,7 @@ export default function About() {
                     
                     {/* Main profile container */}
                     <div className="absolute inset-4 bg-gradient-to-br from-slate-700 to-slate-800 rounded-full border-4 border-blue-400/50 overflow-hidden group hover:border-purple-400 transition-all duration-500 shadow-2xl">
-                      {/* Placeholder content - you can replace this with actual image */}
+                      {/* Placeholder content */}
                       <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-900/50 to-purple-900/50">
                         <div className="text-center">
                           <div className="text-6xl mb-2">👨‍💻</div>
@@ -157,17 +190,150 @@ export default function About() {
           <div className="space-y-12 max-w-4xl mx-auto">
             {/* My Journey */}
             <div className={`transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <section className="bg-black/80 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-gray-800 hover:border-emerald-400 transition-all duration-500 relative overflow-hidden group">
+              <section className="bg-black/80 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-gray-800 hover:border-emerald-400 hover:bg-slate-900/80 transition-all duration-500 relative overflow-hidden group hover:shadow-emerald-500/25">
                 {/* Animated glow effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-2xl"></div>
                 
                 <div className="relative z-10">
-                  <h2 className="text-2xl font-bold text-white mb-6 flex items-center">
-                    <span className="w-8 h-8 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full mr-3 flex items-center justify-center">
+                  <h2 className="text-2xl font-bold text-white mb-6 flex items-center group-hover:text-emerald-400 transition-colors duration-300">
+                    <span className="w-8 h-8 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full mr-3 flex items-center justify-center group-hover:from-teal-400 group-hover:to-emerald-400 transition-all duration-300 group-hover:scale-110">
                       <span className="text-white text-sm">🚀</span>
                     </span>
                     My Journey
                   </h2>
+                  
+                  {/* Three Cards Section */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    {/* Card 1 - B.Voc in AI & ML */}
+                    <div className="bg-slate-900/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/30 hover:border-cyan-400 transition-all duration-300 relative overflow-hidden group/card">
+                      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 opacity-0 group-hover/card:opacity-100 transition-opacity duration-300"></div>
+                      
+                      <div className="relative z-10">
+                        {/* Icon and Year */}
+                        <div className="flex items-center justify-between mb-4">
+                          <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                            <span className="text-2xl">🎓</span>
+                          </div>
+                          <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-semibold">2025</span>
+                        </div>
+                        
+                        {/* Title */}
+                        <h3 className="text-xl font-bold text-white mb-3 group-hover/card:text-cyan-400 transition-colors duration-300">
+                          B.Voc in AI & ML
+                        </h3>
+                        
+                        {/* Institute */}
+                        <div className="flex items-center gap-2 mb-4">
+                          <div className="w-6 h-6 bg-cyan-500/20 rounded-full flex items-center justify-center">
+                            <span className="text-cyan-400 text-xs">🏫</span>
+                          </div>
+                          <span className="text-cyan-400 text-sm font-medium">Nexcore Institute of Technology</span>
+                        </div>
+                        
+                        {/* Description */}
+                        <p className="text-slate-400 text-sm leading-relaxed mb-4">
+                          Building strong foundations in artificial intelligence and machine learning, exploring algorithms, data structures, and innovative AI solutions.
+                        </p>
+                        
+                        {/* Progress Bar */}
+                        <div className="space-y-2">
+                          <div className="flex justify-between items-center">
+                            <span className="text-cyan-400 text-xs font-semibold">48% Complete</span>
+                          </div>
+                          <div className="w-full bg-slate-800 rounded-full h-2 overflow-hidden">
+                            <div className="bg-gradient-to-r from-cyan-500 to-blue-500 h-full rounded-full" style={{ width: '48%' }}></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Card 2 - Frontend Developer */}
+                    <div className="bg-slate-900/50 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30 hover:border-purple-400 transition-all duration-300 relative overflow-hidden group/card">
+                      <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-indigo-500/5 opacity-0 group-hover/card:opacity-100 transition-opacity duration-300"></div>
+                      
+                      <div className="relative z-10">
+                        {/* Icon and Year */}
+                        <div className="flex items-center justify-between mb-4">
+                          <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center">
+                            <span className="text-2xl">💻</span>
+                          </div>
+                          <span className="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm font-semibold">2026</span>
+                        </div>
+                        
+                        {/* Title */}
+                        <h3 className="text-xl font-bold text-white mb-3 group-hover/card:text-purple-400 transition-colors duration-300">
+                          Frontend Developer
+                        </h3>
+                        
+                        {/* Institute */}
+                        <div className="flex items-center gap-2 mb-4">
+                          <div className="w-6 h-6 bg-purple-500/20 rounded-full flex items-center justify-center">
+                            <span className="text-purple-400 text-xs">🏫</span>
+                          </div>
+                          <span className="text-purple-400 text-sm font-medium">Nexcore Institute of Technology</span>
+                        </div>
+                        
+                        {/* Description */}
+                        <p className="text-slate-400 text-sm leading-relaxed mb-4">
+                          Mastering modern web technologies like React, Next.js, and creating beautiful, responsive user interfaces with clean code.
+                        </p>
+                        
+                        {/* Progress Bar */}
+                        <div className="space-y-2">
+                          <div className="flex justify-between items-center">
+                            <span className="text-purple-400 text-xs font-semibold">72% Complete</span>
+                          </div>
+                          <div className="w-full bg-slate-800 rounded-full h-2 overflow-hidden">
+                            <div className="bg-gradient-to-r from-purple-500 to-indigo-500 h-full rounded-full" style={{ width: '72%' }}></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Card 3 - Full Stack Developer */}
+                    <div className="bg-slate-900/50 backdrop-blur-sm rounded-xl p-6 border border-pink-500/30 hover:border-pink-400 transition-all duration-300 relative overflow-hidden group/card">
+                      <div className="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-rose-500/5 opacity-0 group-hover/card:opacity-100 transition-opacity duration-300"></div>
+                      
+                      <div className="relative z-10">
+                        {/* Icon and Year */}
+                        <div className="flex items-center justify-between mb-4">
+                          <div className="w-12 h-12 bg-pink-500/20 rounded-lg flex items-center justify-center">
+                            <span className="text-2xl">⚡</span>
+                          </div>
+                          <span className="px-3 py-1 bg-pink-500/20 text-pink-400 rounded-full text-sm font-semibold">2026</span>
+                        </div>
+                        
+                        {/* Title */}
+                        <h3 className="text-xl font-bold text-white mb-3 group-hover/card:text-pink-400 transition-colors duration-300">
+                          Full Stack Developer
+                        </h3>
+                        
+                        {/* Institute */}
+                        <div className="flex items-center gap-2 mb-4">
+                          <div className="w-6 h-6 bg-pink-500/20 rounded-full flex items-center justify-center">
+                            <span className="text-pink-400 text-xs">🏫</span>
+                          </div>
+                          <span className="text-pink-400 text-sm font-medium">Nexcore Institute of Technology</span>
+                        </div>
+                        
+                        {/* Description */}
+                        <p className="text-slate-400 text-sm leading-relaxed mb-4">
+                          Expanding to backend technologies, databases, and server-side development for complete end-to-end application architecture.
+                        </p>
+                        
+                        {/* Progress Bar */}
+                        <div className="space-y-2">
+                          <div className="flex justify-between items-center">
+                            <span className="text-pink-400 text-xs font-semibold">Upcoming Goal</span>
+                          </div>
+                          <div className="w-full bg-slate-800 rounded-full h-2 overflow-hidden">
+                            <div className="bg-gradient-to-r from-pink-500 to-rose-500 h-full rounded-full animate-pulse" style={{ width: '15%' }}></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
                   <div className="space-y-6">
                     <div className="border-l-4 border-blue-500 pl-6 hover:border-cyan-400 transition-colors duration-300 group/item">
                       <h3 className="text-lg font-semibold text-white mb-2 group-hover/item:text-cyan-400 transition-colors duration-300">
@@ -208,20 +374,20 @@ export default function About() {
 
             {/* What I'm Learning */}
             <div className={`transition-all duration-1000 delay-900 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <section className="bg-black/80 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-gray-800 hover:border-teal-400 transition-all duration-500 relative overflow-hidden group">
+              <section className="bg-black/80 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-gray-800 hover:border-teal-400 hover:bg-slate-900/80 transition-all duration-500 relative overflow-hidden group hover:shadow-teal-500/25">
                 {/* Animated glow effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-teal-500/10 to-emerald-500/10 opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-2xl"></div>
                 
                 <div className="relative z-10">
-                  <h2 className="text-2xl font-bold text-white mb-6 flex items-center">
-                    <span className="w-8 h-8 bg-gradient-to-r from-teal-400 to-emerald-400 rounded-full mr-3 flex items-center justify-center">
+                  <h2 className="text-2xl font-bold text-white mb-6 flex items-center group-hover:text-teal-400 transition-colors duration-300">
+                    <span className="w-8 h-8 bg-gradient-to-r from-teal-400 to-emerald-400 rounded-full mr-3 flex items-center justify-center group-hover:from-emerald-400 group-hover:to-teal-400 transition-all duration-300 group-hover:scale-110">
                       <span className="text-white text-sm">📚</span>
                     </span>
                     What I'm Learning
                   </h2>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-4">
-                      <h3 className="text-lg font-semibold text-white">
+                      <h3 className="text-lg font-semibold text-white group-hover:text-emerald-300 transition-colors duration-300">
                         AI & ML Focus Areas
                       </h3>
                       <ul className="space-y-3">
@@ -245,7 +411,7 @@ export default function About() {
                     </div>
                     
                     <div className="space-y-4">
-                      <h3 className="text-lg font-semibold text-white">
+                      <h3 className="text-lg font-semibold text-white group-hover:text-teal-300 transition-colors duration-300">
                         Frontend Technologies
                       </h3>
                       <ul className="space-y-3">
