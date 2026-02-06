@@ -6,7 +6,7 @@ export default function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
   const [currentRole, setCurrentRole] = useState(0);
 
-  const roles = ['Frontend Developer', 'UI/UX Developer', 'Website Developer'];
+  const roles = ['Frontend Developer', 'UI/UX Designer', 'Web Developer'];
 
   useEffect(() => {
     setIsVisible(true);
@@ -49,7 +49,9 @@ export default function HeroSection() {
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-left max-w-4xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center min-h-[80vh]">
+          {/* Left side - Content aligned exactly under navbar "Iqfat" */}
+          <div className="text-left max-w-2xl" style={{ marginLeft: '0' }}>
           {/* Line 1: "Hi, I'm" */}
           <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <p className="text-lg md:text-xl text-slate-400 font-medium mb-4 animate-fade-in">
@@ -59,7 +61,7 @@ export default function HeroSection() {
 
           {/* Line 2: "Iqfat Shaikh" - highlighted/bold/larger font */}
           <div className={`transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 relative">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 relative whitespace-nowrap">
               <span className="bg-gradient-to-r from-white via-blue-100 to-slate-200 bg-clip-text text-transparent animate-gradient-x">
                 Iqfat Shaikh
               </span>
@@ -134,6 +136,53 @@ export default function HeroSection() {
                 <svg className="w-6 h-6 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>
+              </div>
+            </div>
+          </div>
+          </div>
+          
+          {/* Right side - Floating Tech Elements */}
+          <div className="hidden lg:block relative">
+            <div className="relative w-full h-96 flex items-center justify-center">
+              {/* Animated floating elements */}
+              <div className="absolute inset-0">
+                {/* React Icon */}
+                <div className="absolute top-16 left-20 w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg animate-float shadow-lg shadow-cyan-500/30">
+                  ⚛️
+                </div>
+                
+                {/* JavaScript Icon */}
+                <div className="absolute top-32 right-16 w-14 h-14 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center text-white font-bold text-sm animate-float delay-500 shadow-lg shadow-yellow-500/30">
+                  JS
+                </div>
+                
+                {/* UI Icon */}
+                <div className="absolute bottom-20 left-16 w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-sm animate-float delay-1000 shadow-lg shadow-purple-500/30">
+                  UI
+                </div>
+                
+                {/* Large background circles */}
+                <div className="absolute top-8 right-8 w-32 h-32 border-2 border-slate-600/30 rounded-full animate-pulse"></div>
+                <div className="absolute bottom-12 right-20 w-24 h-24 border-2 border-slate-500/20 rounded-full animate-pulse delay-700"></div>
+                <div className="absolute top-1/2 left-8 w-20 h-20 border border-slate-600/20 rounded-full animate-pulse delay-300"></div>
+                
+                {/* Floating gradient blobs */}
+                <div className="absolute top-20 right-32 w-16 h-16 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-sm animate-float delay-200"></div>
+                <div className="absolute bottom-32 left-24 w-20 h-20 bg-gradient-to-br from-cyan-500/15 to-blue-500/15 rounded-full blur-sm animate-float delay-800"></div>
+                <div className="absolute top-1/3 right-12 w-12 h-12 bg-gradient-to-br from-purple-500/25 to-pink-500/25 rounded-full blur-sm animate-float delay-1200"></div>
+                
+                {/* Small accent dots */}
+                <div className="absolute top-24 left-32 w-3 h-3 bg-cyan-400 rounded-full animate-ping delay-300"></div>
+                <div className="absolute bottom-28 right-28 w-2 h-2 bg-purple-400 rounded-full animate-ping delay-700"></div>
+                <div className="absolute top-1/2 right-6 w-4 h-4 bg-blue-400 rounded-full animate-ping delay-1000"></div>
+                
+                {/* Connecting lines */}
+                <div className="absolute top-20 left-36 w-16 h-px bg-gradient-to-r from-cyan-400/50 to-transparent animate-pulse delay-500"></div>
+                <div className="absolute bottom-24 right-32 w-12 h-px bg-gradient-to-l from-purple-400/50 to-transparent animate-pulse delay-900"></div>
+                
+                {/* Geometric shapes */}
+                <div className="absolute top-40 right-24 w-8 h-8 border border-slate-500/30 rotate-45 animate-spin-slow"></div>
+                <div className="absolute bottom-16 left-28 w-6 h-6 bg-gradient-to-br from-slate-600/40 to-slate-700/40 transform rotate-12 animate-pulse delay-600"></div>
               </div>
             </div>
           </div>

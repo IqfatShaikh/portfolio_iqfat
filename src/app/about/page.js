@@ -11,36 +11,36 @@ export default function About() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-slate-900 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 relative overflow-hidden">
       <Navbar />
       
       {/* Animated background elements for the entire page */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Floating geometric shapes */}
-        <div className="absolute top-10 left-10 w-64 h-64 bg-gradient-to-br from-emerald-500/10 to-teal-600/10 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-br from-teal-500/10 to-green-600/10 rounded-full blur-3xl animate-float delay-1000"></div>
-        <div className="absolute top-1/3 right-1/4 w-48 h-48 bg-gradient-to-br from-cyan-500/5 to-emerald-600/5 rounded-full blur-3xl animate-float delay-500"></div>
-        <div className="absolute bottom-1/3 left-1/4 w-56 h-56 bg-gradient-to-br from-green-500/8 to-teal-600/8 rounded-full blur-3xl animate-float delay-1500"></div>
+        <div className="absolute top-10 left-10 w-64 h-64 bg-gradient-to-br from-blue-500/10 to-purple-600/10 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-br from-indigo-500/10 to-cyan-600/10 rounded-full blur-3xl animate-float delay-1000"></div>
+        <div className="absolute top-1/3 right-1/4 w-48 h-48 bg-gradient-to-br from-purple-500/5 to-pink-600/5 rounded-full blur-3xl animate-float delay-500"></div>
+        <div className="absolute bottom-1/3 left-1/4 w-56 h-56 bg-gradient-to-br from-blue-500/8 to-indigo-600/8 rounded-full blur-3xl animate-float delay-1500"></div>
         
         {/* Animated grid pattern */}
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         
         {/* Moving particles */}
-        <div className="absolute top-1/4 left-1/5 w-2 h-2 bg-emerald-400 rounded-full animate-ping delay-700"></div>
-        <div className="absolute top-2/3 right-1/5 w-1 h-1 bg-teal-400 rounded-full animate-ping delay-1000"></div>
-        <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-green-400 rounded-full animate-ping delay-300"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-1 h-1 bg-cyan-400 rounded-full animate-ping delay-1200"></div>
+        <div className="absolute top-1/4 left-1/5 w-2 h-2 bg-blue-400 rounded-full animate-ping delay-700"></div>
+        <div className="absolute top-2/3 right-1/5 w-1 h-1 bg-purple-400 rounded-full animate-ping delay-1000"></div>
+        <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-cyan-400 rounded-full animate-ping delay-300"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-1 h-1 bg-indigo-400 rounded-full animate-ping delay-1200"></div>
         
         {/* Gradient lines */}
-        <div className="absolute top-0 left-1/5 w-px h-full bg-gradient-to-b from-transparent via-emerald-500/20 to-transparent animate-pulse"></div>
-        <div className="absolute top-0 right-1/4 w-px h-full bg-gradient-to-b from-transparent via-teal-500/20 to-transparent animate-pulse delay-500"></div>
-        <div className="absolute top-0 left-3/4 w-px h-full bg-gradient-to-b from-transparent via-green-500/15 to-transparent animate-pulse delay-1000"></div>
+        <div className="absolute top-0 left-1/5 w-px h-full bg-gradient-to-b from-transparent via-blue-500/20 to-transparent animate-pulse"></div>
+        <div className="absolute top-0 right-1/4 w-px h-full bg-gradient-to-b from-transparent via-purple-500/20 to-transparent animate-pulse delay-500"></div>
+        <div className="absolute top-0 left-3/4 w-px h-full bg-gradient-to-b from-transparent via-cyan-500/15 to-transparent animate-pulse delay-1000"></div>
         
         {/* AI/ML themed floating elements */}
-        <div className="absolute top-20 right-32 text-emerald-400/30 text-4xl animate-bounce delay-200 font-mono">AI</div>
-        <div className="absolute bottom-32 left-32 text-teal-400/30 text-3xl animate-bounce delay-800 font-mono">ML</div>
-        <div className="absolute top-1/2 left-20 text-green-400/30 text-2xl animate-bounce delay-1400 font-mono">∑</div>
-        <div className="absolute bottom-20 right-1/4 text-cyan-400/30 text-3xl animate-bounce delay-600 font-mono">∞</div>
+        <div className="absolute top-20 right-32 text-blue-400/30 text-4xl animate-bounce delay-200 font-mono">AI</div>
+        <div className="absolute bottom-32 left-32 text-purple-400/30 text-3xl animate-bounce delay-800 font-mono">ML</div>
+        <div className="absolute top-1/2 left-20 text-cyan-400/30 text-2xl animate-bounce delay-1400 font-mono">∑</div>
+        <div className="absolute bottom-20 right-1/4 text-indigo-400/30 text-3xl animate-bounce delay-600 font-mono">∞</div>
       </div>
       
       <main className="pt-20 pb-16 relative z-10">
@@ -48,17 +48,17 @@ export default function About() {
           {/* Enhanced Hero Section with Visual Elements - Full Screen */}
           <div className="min-h-screen flex items-center justify-center -mt-20 pt-20">
             <div className="grid lg:grid-cols-2 gap-12 items-center w-full relative z-10">
-              {/* Left side - Title and Description */}
-              <div className="text-left">
+              {/* Left side - Title and Description aligned exactly under navbar "Iqfat" */}
+              <div className="text-left max-w-2xl" style={{ marginLeft: '0' }}>
                 <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                   <div className="mb-6">
-                    <span className="px-4 py-2 bg-slate-800 border border-emerald-400/50 rounded-full text-emerald-400 text-sm font-medium">
+                    <span className="px-4 py-2 bg-slate-800 border border-blue-400/50 rounded-full text-blue-400 text-sm font-medium">
                       Frontend Developer || B.Voc in AI & ML
                     </span>
                   </div>
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
-                    <span className="text-slate-300">Hello, I'm </span>
-                    <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-green-400 bg-clip-text text-transparent animate-gradient-x">
+                  <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 leading-tight">
+                    <span className="text-slate-300 block text-lg md:text-xl lg:text-2xl font-medium">Hello, I'm</span>
+                    <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent animate-gradient-x whitespace-nowrap">
                       Iqfat Shaikh
                     </span>
                   </h1>
@@ -68,13 +68,15 @@ export default function About() {
                     I specialize in modern web development as a frontend developer and 
                     B.Voc in AI & ML student, building responsive websites and intelligent web 
                     applications. Currently learning AI & ML technologies with a future goal of becoming an 
-                    <span className="text-emerald-400 font-semibold"> AI & ML Engineer</span>.
+                    <span className="text-blue-400 font-semibold"> AI & ML Engineer</span>.
                   </p>
                   
                   {/* Social Links */}
                   <div className="flex gap-4 mb-10">
                     <a
-                      href="#"
+                      href="https://www.linkedin.com/in/iqfat-shaikh-a63640379?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center text-white hover:bg-blue-700 transition-colors duration-300 transform hover:scale-110"
                       aria-label="LinkedIn"
                     >
@@ -83,7 +85,9 @@ export default function About() {
                       </svg>
                     </a>
                     <a
-                      href="#"
+                      href="https://github.com/IqfatShaikh"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="w-12 h-12 bg-slate-700 rounded-lg flex items-center justify-center text-white hover:bg-slate-600 transition-colors duration-300 transform hover:scale-110"
                       aria-label="GitHub"
                     >
@@ -92,7 +96,9 @@ export default function About() {
                       </svg>
                     </a>
                     <a
-                      href="#"
+                      href="https://www.instagram.com/shaikhiffat_21?igsh=MXFpZHZ2d3h6Z2syZQ=="
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center text-white hover:from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-110"
                       aria-label="Instagram"
                     >
@@ -104,8 +110,8 @@ export default function About() {
 
                   {/* Contact Button */}
                   <a
-                    href="#contact"
-                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-lg font-medium hover:from-emerald-700 hover:to-teal-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-emerald-500/25"
+                    href="/contact"
+                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-blue-500/25 mb-16"
                   >
                     Contact Me
                     <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -121,13 +127,13 @@ export default function About() {
                   {/* Profile picture container with enhanced glow */}
                   <div className="relative w-80 h-80">
                     {/* Enhanced glowing background */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/30 via-teal-500/30 to-green-500/30 rounded-full blur-3xl animate-pulse"></div>
-                    <div className="absolute inset-2 bg-gradient-to-r from-emerald-400/20 to-teal-400/20 rounded-full blur-2xl animate-pulse delay-1000"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/30 via-purple-500/30 to-cyan-500/30 rounded-full blur-3xl animate-pulse"></div>
+                    <div className="absolute inset-2 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full blur-2xl animate-pulse delay-1000"></div>
                     
                     {/* Main profile container */}
-                    <div className="absolute inset-4 bg-gradient-to-br from-slate-700 to-slate-800 rounded-full border-4 border-emerald-400/50 overflow-hidden group hover:border-teal-400 transition-all duration-500 shadow-2xl">
+                    <div className="absolute inset-4 bg-gradient-to-br from-slate-700 to-slate-800 rounded-full border-4 border-blue-400/50 overflow-hidden group hover:border-purple-400 transition-all duration-500 shadow-2xl">
                       {/* Placeholder content - you can replace this with actual image */}
-                      <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-emerald-900/50 to-teal-900/50">
+                      <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-900/50 to-purple-900/50">
                         <div className="text-center">
                           <div className="text-6xl mb-2">👨‍💻</div>
                           <div className="text-slate-300 text-sm font-medium">That's Me!</div>
@@ -135,13 +141,13 @@ export default function About() {
                       </div>
                       
                       {/* Enhanced hover overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     </div>
                     
                     {/* Floating decorative elements */}
-                    <div className="absolute top-4 right-4 w-4 h-4 bg-emerald-400 rounded-full animate-ping"></div>
-                    <div className="absolute bottom-8 left-8 w-3 h-3 bg-teal-400 rounded-full animate-ping delay-500"></div>
-                    <div className="absolute top-1/2 right-2 w-2 h-2 bg-green-400 rounded-full animate-ping delay-1000"></div>
+                    <div className="absolute top-4 right-4 w-4 h-4 bg-blue-400 rounded-full animate-ping"></div>
+                    <div className="absolute bottom-8 left-8 w-3 h-3 bg-purple-400 rounded-full animate-ping delay-500"></div>
+                    <div className="absolute top-1/2 right-2 w-2 h-2 bg-cyan-400 rounded-full animate-ping delay-1000"></div>
                   </div>
                 </div>
               </div>
@@ -151,7 +157,7 @@ export default function About() {
           <div className="space-y-12 max-w-4xl mx-auto">
             {/* My Journey */}
             <div className={`transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <section className="bg-slate-800 rounded-2xl p-8 shadow-lg border border-slate-700 hover:border-emerald-400 transition-all duration-500 relative overflow-hidden group">
+              <section className="bg-black/80 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-gray-800 hover:border-emerald-400 transition-all duration-500 relative overflow-hidden group">
                 {/* Animated glow effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-2xl"></div>
                 
@@ -202,7 +208,7 @@ export default function About() {
 
             {/* What I'm Learning */}
             <div className={`transition-all duration-1000 delay-900 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <section className="bg-slate-800 rounded-2xl p-8 shadow-lg border border-slate-700 hover:border-teal-400 transition-all duration-500 relative overflow-hidden group">
+              <section className="bg-black/80 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-gray-800 hover:border-teal-400 transition-all duration-500 relative overflow-hidden group">
                 {/* Animated glow effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-teal-500/10 to-emerald-500/10 opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-2xl"></div>
                 
@@ -225,7 +231,7 @@ export default function About() {
                         </li>
                         <li className="flex items-center group/skill hover:transform hover:translate-x-2 transition-all duration-300">
                           <span className="w-3 h-3 bg-teal-500 rounded-full mr-3 group-hover/skill:animate-pulse"></span>
-                          <span className="text-slate-300 group-hover/skill:text-teal-400 transition-colors duration-300">Python for Data Science</span>
+                          <span className="text-slate-300 group-hover/skill:text-teal-400 transition-colors duration-300">Backend Development with Node.js</span>
                         </li>
                         <li className="flex items-center group/skill hover:transform hover:translate-x-2 transition-all duration-300">
                           <span className="w-3 h-3 bg-green-500 rounded-full mr-3 group-hover/skill:animate-pulse"></span>
@@ -233,7 +239,7 @@ export default function About() {
                         </li>
                         <li className="flex items-center group/skill hover:transform hover:translate-x-2 transition-all duration-300">
                           <span className="w-3 h-3 bg-cyan-500 rounded-full mr-3 group-hover/skill:animate-pulse"></span>
-                          <span className="text-slate-300 group-hover/skill:text-cyan-400 transition-colors duration-300">Data Analysis & Visualization</span>
+                          <span className="text-slate-300 group-hover/skill:text-cyan-400 transition-colors duration-300">Database Management & APIs</span>
                         </li>
                       </ul>
                     </div>
@@ -249,7 +255,7 @@ export default function About() {
                         </li>
                         <li className="flex items-center group/goal hover:transform hover:translate-x-2 transition-all duration-300">
                           <span className="w-3 h-3 bg-purple-500 rounded-full mr-3 group-hover/goal:animate-pulse"></span>
-                          <span className="text-slate-300 group-hover/goal:text-purple-400 transition-colors duration-300">TypeScript for better code quality</span>
+                          <span className="text-slate-300 group-hover/goal:text-purple-400 transition-colors duration-300">Modern JavaScript frameworks and libraries</span>
                         </li>
                         <li className="flex items-center group/goal hover:transform hover:translate-x-2 transition-all duration-300">
                           <span className="w-3 h-3 bg-yellow-500 rounded-full mr-3 group-hover/goal:animate-pulse"></span>
@@ -268,26 +274,26 @@ export default function About() {
 
             {/* My Goals */}
             <div className={`transition-all duration-1000 delay-1100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <section className="bg-gradient-to-r from-slate-800 to-slate-700 rounded-2xl p-8 shadow-lg border border-slate-600 hover:border-gradient-to-r hover:from-emerald-400 hover:to-teal-400 transition-all duration-500 relative overflow-hidden group">
+              <section className="bg-black/95 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-gray-900 hover:border-emerald-400 hover:bg-slate-900/95 transition-all duration-500 relative overflow-hidden group hover:shadow-emerald-500/25">
                 {/* Enhanced animated glow effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 via-teal-500/10 to-green-500/10 opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-2xl animate-gradient-x"></div>
                 
                 <div className="relative z-10">
-                  <h2 className="text-2xl font-bold text-white mb-6 flex items-center">
-                    <span className="w-8 h-8 bg-gradient-to-r from-emerald-400 via-teal-400 to-green-400 rounded-full mr-3 flex items-center justify-center animate-gradient-x">
+                  <h2 className="text-2xl font-bold text-white mb-6 flex items-center group-hover:text-emerald-400 transition-colors duration-300">
+                    <span className="w-8 h-8 bg-gradient-to-r from-emerald-400 via-teal-400 to-green-400 rounded-full mr-3 flex items-center justify-center animate-gradient-x group-hover:from-teal-400 group-hover:via-green-400 group-hover:to-emerald-400 transition-all duration-300 group-hover:scale-110">
                       <span className="text-white text-sm">🎯</span>
                     </span>
                     My Goals
                   </h2>
                   <div className="space-y-4">
-                    <p className="text-slate-300 leading-relaxed">
-                      My primary goal is to become an <span className="text-emerald-400 font-semibold">AI & ML Engineer</span>, combining my frontend 
+                    <p className="text-slate-300 leading-relaxed group-hover:text-slate-200 transition-colors duration-300">
+                      My primary goal is to become an <span className="text-emerald-400 font-semibold group-hover:text-emerald-300 transition-colors duration-300">AI & ML Engineer</span>, combining my frontend 
                       development skills with artificial intelligence and machine learning expertise. I believe 
                       in the power of AI to solve complex problems and create intelligent applications that can make 
                       a meaningful impact on society.
                     </p>
-                    <p className="text-slate-300 leading-relaxed">
-                      I'm passionate about building <span className="text-teal-400 font-semibold">AI-powered web applications</span> that provide 
+                    <p className="text-slate-300 leading-relaxed group-hover:text-slate-200 transition-colors duration-300">
+                      I'm passionate about building <span className="text-teal-400 font-semibold group-hover:text-teal-300 transition-colors duration-300">AI-powered web applications</span> that provide 
                       intelligent user experiences. Whether it's implementing machine learning models in web interfaces, 
                       creating data visualization dashboards, or developing predictive analytics tools, I approach every 
                       project with curiosity and dedication to push the boundaries of what's possible with AI and web technologies.
