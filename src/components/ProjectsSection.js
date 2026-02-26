@@ -77,7 +77,7 @@ export default function ProjectsSection() {
     <section 
       ref={sectionRef}
       id="projects" 
-      className="py-20 bg-gradient-to-br from-slate-950 via-indigo-950 to-purple-950 relative overflow-hidden"
+      className="py-20 bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 relative overflow-hidden"
     >
       {/* Enhanced animated background */}
       <div className="absolute inset-0 overflow-hidden">
@@ -86,13 +86,13 @@ export default function ProjectsSection() {
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tl from-cyan-500/5 via-blue-500/5 to-purple-500/5 animate-gradient-x"></div>
         
         {/* Multiple floating orbs with different animations */}
-        <div className="absolute top-20 left-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-20 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl animate-float" style={{animationDelay: '1s', animationDuration: '8s'}}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-pink-500/15 rounded-full blur-3xl animate-float" style={{animationDelay: '0.5s', animationDuration: '10s'}}></div>
-        <div className="absolute top-40 right-40 w-64 h-64 bg-cyan-500/15 rounded-full blur-3xl animate-float" style={{animationDelay: '2s', animationDuration: '12s'}}></div>
+        <div className="absolute top-10 left-10 w-64 h-64 bg-gradient-to-br from-blue-500/10 to-purple-600/10 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-br from-indigo-500/10 to-cyan-600/10 rounded-full blur-3xl animate-float" style={{animationDelay: '1s', animationDuration: '8s'}}></div>
+        <div className="absolute top-1/3 right-1/4 w-48 h-48 bg-gradient-to-br from-purple-500/5 to-pink-600/5 rounded-full blur-3xl animate-float" style={{animationDelay: '0.5s', animationDuration: '10s'}}></div>
+        <div className="absolute bottom-1/3 left-1/4 w-56 h-56 bg-gradient-to-br from-blue-500/8 to-indigo-600/8 rounded-full blur-3xl animate-float" style={{animationDelay: '1.5s', animationDuration: '12s'}}></div>
         
         {/* Animated grid with glow */}
-        <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         
         {/* More glowing particles */}
         <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
@@ -100,12 +100,17 @@ export default function ProjectsSection() {
         <div className="absolute bottom-1/3 left-1/3 w-2 h-2 bg-pink-400 rounded-full animate-ping" style={{animationDelay: '1s'}}></div>
         <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-cyan-400 rounded-full animate-ping" style={{animationDelay: '1.5s'}}></div>
         <div className="absolute bottom-1/4 right-1/2 w-1.5 h-1.5 bg-blue-300 rounded-full animate-ping" style={{animationDelay: '0.3s'}}></div>
+        
+        {/* Gradient lines */}
+        <div className="absolute top-0 left-1/5 w-px h-full bg-gradient-to-b from-transparent via-blue-500/20 to-transparent animate-pulse"></div>
+        <div className="absolute top-0 right-1/4 w-px h-full bg-gradient-to-b from-transparent via-purple-500/20 to-transparent animate-pulse" style={{animationDelay: '0.5s'}}></div>
+        <div className="absolute top-0 left-3/4 w-px h-full bg-gradient-to-b from-transparent via-cyan-500/15 to-transparent animate-pulse" style={{animationDelay: '1s'}}></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-20">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-16">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 relative inline-block">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 relative inline-block">
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient-x drop-shadow-2xl">
                 Featured Projects
               </span>
@@ -116,7 +121,7 @@ export default function ProjectsSection() {
             </h2>
           </div>
           <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <p className="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed mt-8">
+            <p className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed mt-8">
               Explore my latest work showcasing 
               <span className="text-blue-400 font-bold"> innovative solutions</span>, 
               <span className="text-purple-400 font-bold"> modern design</span>, and 
@@ -125,7 +130,7 @@ export default function ProjectsSection() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {projects.map((project, index) => (
             <div
               key={index}
@@ -139,21 +144,18 @@ export default function ProjectsSection() {
                 transition: 'all 0.7s ease-out'
               }}
             >
-              <div className="relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-2xl rounded-3xl overflow-hidden border-2 border-slate-700/50 hover:border-purple-500/70 transition-all duration-700 transform hover:-translate-y-2 shadow-2xl hover:shadow-purple-500/40 group-hover:shadow-[0_20px_60px_-15px_rgba(168,85,247,0.4)]">
+              <div className="relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-2xl rounded-2xl overflow-hidden border-2 border-slate-700/50 hover:border-purple-500/70 transition-all duration-700 transform hover:-translate-y-2 shadow-2xl hover:shadow-purple-500/40 group-hover:shadow-[0_20px_60px_-15px_rgba(168,85,247,0.4)]">
                 
                 {/* Enhanced glowing border effect with multiple layers */}
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-500/0 via-purple-500/30 to-pink-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-2xl"></div>
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-400/20 via-purple-400/20 to-pink-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/0 via-purple-500/30 to-pink-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-2xl"></div>
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-400/20 via-purple-400/20 to-pink-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
                 {/* Animated corner accents */}
-                <div className="absolute top-0 left-0 w-20 h-20 bg-gradient-to-br from-blue-500/40 to-transparent rounded-br-full opacity-0 group-hover:opacity-100 transition-all duration-500 blur-sm"></div>
-                <div className="absolute bottom-0 right-0 w-20 h-20 bg-gradient-to-tl from-pink-500/40 to-transparent rounded-tl-full opacity-0 group-hover:opacity-100 transition-all duration-500 blur-sm"></div>
+                <div className="absolute top-0 left-0 w-16 h-16 bg-gradient-to-br from-blue-500/40 to-transparent rounded-br-full opacity-0 group-hover:opacity-100 transition-all duration-500 blur-sm"></div>
+                <div className="absolute bottom-0 right-0 w-16 h-16 bg-gradient-to-tl from-pink-500/40 to-transparent rounded-tl-full opacity-0 group-hover:opacity-100 transition-all duration-500 blur-sm"></div>
                 
                 {/* Project Image Section */}
-                <div className="relative h-64 overflow-hidden">
-                  {/* Enhanced gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent z-10"></div>
-                  
+                <div className="relative h-48 overflow-hidden">
                   {/* Image with enhanced zoom */}
                   <img 
                     src={project.image} 
@@ -175,23 +177,23 @@ export default function ProjectsSection() {
                 </div>
 
                 {/* Content Section */}
-                <div className="relative p-8 space-y-5">
+                <div className="relative p-6 space-y-4">
                   {/* Title with enhanced styling */}
-                  <h3 className="text-3xl font-bold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:via-purple-400 group-hover:to-pink-400 group-hover:bg-clip-text transition-all duration-500">
+                  <h3 className="text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:via-purple-400 group-hover:to-pink-400 group-hover:bg-clip-text transition-all duration-500">
                     {project.title}
                   </h3>
                   
                   {/* Description with better styling */}
-                  <p className="text-slate-300 leading-relaxed text-base group-hover:text-slate-200 transition-colors duration-300">
+                  <p className="text-slate-300 leading-relaxed text-sm group-hover:text-slate-200 transition-colors duration-300">
                     {project.description}
                   </p>
 
                   {/* Tech Stack with enhanced badges */}
-                  <div className="flex flex-wrap gap-3 pt-3">
+                  <div className="flex flex-wrap gap-2 pt-2">
                     {project.techStack.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-5 py-2.5 bg-gradient-to-r from-slate-700/60 to-slate-800/60 backdrop-blur-sm text-blue-300 text-sm rounded-full font-semibold border border-slate-600/50 hover:border-purple-400/70 hover:bg-gradient-to-r hover:from-blue-900/30 hover:to-purple-900/30 hover:text-purple-300 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-purple-500/30 transform"
+                        className="px-4 py-2 bg-gradient-to-r from-slate-700/60 to-slate-800/60 backdrop-blur-sm text-blue-300 text-xs rounded-full font-semibold border border-slate-600/50 hover:border-purple-400/70 hover:bg-gradient-to-r hover:from-blue-900/30 hover:to-purple-900/30 hover:text-purple-300 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-purple-500/30 transform"
                       >
                         {tech}
                       </span>
@@ -199,15 +201,15 @@ export default function ProjectsSection() {
                   </div>
 
                   {/* Enhanced Action Button */}
-                  <div className="pt-5">
+                  <div className="pt-4">
                     <a
                       href={project.figmaUrl || project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group/btn inline-flex items-center justify-center w-full px-8 py-5 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-500 hover:via-purple-500 hover:to-pink-500 text-white font-bold text-lg rounded-2xl transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/60 relative overflow-hidden"
+                      className="group/btn inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-500 hover:via-purple-500 hover:to-pink-500 text-white font-bold text-base rounded-xl transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/60 relative overflow-hidden"
                     >
                       <span className="relative z-10 flex items-center">
-                        <svg className="w-6 h-6 mr-3 group-hover/btn:rotate-45 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-5 h-5 mr-2 group-hover/btn:rotate-45 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
                         {project.figmaUrl ? 'View Design' : 'View Code'}
@@ -221,7 +223,7 @@ export default function ProjectsSection() {
                 </div>
                 
                 {/* Enhanced bottom accent line */}
-                <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left shadow-lg shadow-purple-500/50"></div>
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left shadow-lg shadow-purple-500/50"></div>
                 
                 {/* Additional animated accent */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-right opacity-60"></div>

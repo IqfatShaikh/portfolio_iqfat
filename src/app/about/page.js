@@ -72,13 +72,12 @@ export default function About() {
                       
                       {/* Inner container */}
                       <div className="absolute inset-2 bg-gradient-to-br from-slate-700 to-slate-800 rounded-full flex items-center justify-center overflow-hidden">
-                        {/* Placeholder content */}
-                        <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-900/50 to-purple-900/50">
-                          <div className="text-center">
-                            <div className="text-6xl mb-2">👨‍💻</div>
-                            <div className="text-slate-300 text-sm font-medium">That's Me!</div>
-                          </div>
-                        </div>
+                        {/* Profile Image */}
+                        <img 
+                          src="/My-Portfolio-Image.png" 
+                          alt="Iqfat Shaikh"
+                          className="w-full h-full object-cover"
+                        />
                       </div>
                       
                       {/* Floating particles */}
@@ -165,13 +164,12 @@ export default function About() {
                     
                     {/* Main profile container */}
                     <div className="absolute inset-4 bg-gradient-to-br from-slate-700 to-slate-800 rounded-full border-4 border-blue-400/50 overflow-hidden group hover:border-purple-400 transition-all duration-500 shadow-2xl">
-                      {/* Placeholder content */}
-                      <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-900/50 to-purple-900/50">
-                        <div className="text-center">
-                          <div className="text-6xl mb-2">👨‍💻</div>
-                          <div className="text-slate-300 text-sm font-medium">That's Me!</div>
-                        </div>
-                      </div>
+                      {/* Profile Image */}
+                      <img 
+                        src="/My-Portfolio-Image.png" 
+                        alt="Iqfat Shaikh"
+                        className="w-full h-full object-cover"
+                      />
                       
                       {/* Enhanced hover overlay */}
                       <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
