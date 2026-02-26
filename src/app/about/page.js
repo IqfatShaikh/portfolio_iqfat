@@ -468,6 +468,194 @@ export default function About() {
                 </div>
               </section>
             </div>
+
+            {/* Certificates */}
+            <div className={`transition-all duration-1000 delay-1300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <section className="bg-black/80 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-gray-800 hover:border-blue-400 hover:bg-slate-900/80 transition-all duration-500 relative overflow-hidden group hover:shadow-blue-500/25">
+                {/* Animated glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-2xl"></div>
+                
+                <div className="relative z-10">
+                  <h2 className="text-2xl font-bold text-white mb-8 flex items-center group-hover:text-blue-400 transition-colors duration-300">
+                    <span className="w-8 h-8 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full mr-3 flex items-center justify-center group-hover:from-purple-400 group-hover:to-blue-400 transition-all duration-300 group-hover:scale-110">
+                      <span className="text-white text-sm">🏆</span>
+                    </span>
+                    Certificates & Achievements
+                  </h2>
+                  
+                  {/* Certificates Grid */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {/* Certificate Card 1 - AI Appreciate */}
+                    <div className="bg-slate-900/50 backdrop-blur-sm rounded-xl p-6 border border-blue-500/30 hover:border-blue-400 transition-all duration-300 relative overflow-hidden group/cert transform hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/20">
+                      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover/cert:opacity-100 transition-opacity duration-300"></div>
+                      
+                      <div className="relative z-10">
+                        {/* Certificate Image */}
+                        <div className="w-full h-48 mb-4 rounded-lg overflow-hidden bg-slate-800/50 border border-slate-700 group-hover/cert:border-blue-400/50 transition-all duration-300">
+                          <img 
+                            src="/Iqfat Shaikh_AI_APPRECIATE_CERTIFICATE.png" 
+                            alt="AI Appreciate Certificate"
+                            className="w-full h-full object-cover object-center transform group-hover/cert:scale-110 transition-transform duration-500"
+                          />
+                        </div>
+                        
+                        {/* Certificate Title */}
+                        <h3 className="text-xl font-bold text-white mb-2 group-hover/cert:text-blue-400 transition-colors duration-300">
+                          AI Appreciate Certificate
+                        </h3>
+                        
+                        {/* Issuer */}
+                        <div className="flex items-center gap-2 mb-3">
+                          <div className="w-5 h-5 bg-blue-500/20 rounded-full flex items-center justify-center">
+                            <span className="text-blue-400 text-xs">🏢</span>
+                          </div>
+                          <span className="text-blue-400 text-sm font-medium">AI Certification Program</span>
+                        </div>
+                        
+                        {/* Date */}
+                        <div className="flex items-center gap-2 mb-4">
+                          <div className="w-5 h-5 bg-purple-500/20 rounded-full flex items-center justify-center">
+                            <span className="text-purple-400 text-xs">📅</span>
+                          </div>
+                          <span className="text-slate-400 text-sm">Certified Professional</span>
+                        </div>
+                        
+                        {/* Description */}
+                        <p className="text-slate-400 text-sm leading-relaxed mb-4">
+                          Recognition for demonstrating appreciation and understanding of artificial intelligence concepts and applications.
+                        </p>
+                        
+                        {/* View Certificate Button */}
+                        <a
+                          href="/Iqfat Shaikh_AI_APPRECIATE_CERTIFICATE.png"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-semibold rounded-lg hover:from-blue-500 hover:to-purple-500 transition-all duration-300 transform hover:scale-105"
+                        >
+                          <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                          </svg>
+                          View Certificate
+                        </a>
+                      </div>
+                    </div>
+
+                    {/* Certificate Card 2 - AI Aware */}
+                    <div className="bg-slate-900/50 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30 hover:border-purple-400 transition-all duration-300 relative overflow-hidden group/cert transform hover:-translate-y-2 hover:shadow-xl hover:shadow-purple-500/20">
+                      <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 opacity-0 group-hover/cert:opacity-100 transition-opacity duration-300"></div>
+                      
+                      <div className="relative z-10">
+                        {/* Certificate Image */}
+                        <div className="w-full h-48 mb-4 rounded-lg overflow-hidden bg-slate-800/50 border border-slate-700 group-hover/cert:border-purple-400/50 transition-all duration-300">
+                          <img 
+                            src="/Iqfat Shaikh_AI_AWARE_CERTIFICATE.png" 
+                            alt="AI Aware Certificate"
+                            className="w-full h-full object-cover object-center transform group-hover/cert:scale-110 transition-transform duration-500"
+                          />
+                        </div>
+                        
+                        {/* Certificate Title */}
+                        <h3 className="text-xl font-bold text-white mb-2 group-hover/cert:text-purple-400 transition-colors duration-300">
+                          AI Aware Certificate
+                        </h3>
+                        
+                        {/* Issuer */}
+                        <div className="flex items-center gap-2 mb-3">
+                          <div className="w-5 h-5 bg-purple-500/20 rounded-full flex items-center justify-center">
+                            <span className="text-purple-400 text-xs">🏢</span>
+                          </div>
+                          <span className="text-purple-400 text-sm font-medium">AI Certification Program</span>
+                        </div>
+                        
+                        {/* Date */}
+                        <div className="flex items-center gap-2 mb-4">
+                          <div className="w-5 h-5 bg-pink-500/20 rounded-full flex items-center justify-center">
+                            <span className="text-pink-400 text-xs">📅</span>
+                          </div>
+                          <span className="text-slate-400 text-sm">Certified Professional</span>
+                        </div>
+                        
+                        {/* Description */}
+                        <p className="text-slate-400 text-sm leading-relaxed mb-4">
+                          Certification for awareness and foundational knowledge in artificial intelligence technologies and methodologies.
+                        </p>
+                        
+                        {/* View Certificate Button */}
+                        <a
+                          href="/Iqfat Shaikh_AI_AWARE_CERTIFICATE.png"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-semibold rounded-lg hover:from-purple-500 hover:to-pink-500 transition-all duration-300 transform hover:scale-105"
+                        >
+                          <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                          </svg>
+                          View Certificate
+                        </a>
+                      </div>
+                    </div>
+
+                    {/* Certificate Card 3 - YuvaAI */}
+                    <div className="bg-slate-900/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/30 hover:border-cyan-400 transition-all duration-300 relative overflow-hidden group/cert transform hover:-translate-y-2 hover:shadow-xl hover:shadow-cyan-500/20">
+                      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-teal-500/5 opacity-0 group-hover/cert:opacity-100 transition-opacity duration-300"></div>
+                      
+                      <div className="relative z-10">
+                        {/* Certificate Image */}
+                        <div className="w-full h-48 mb-4 rounded-lg overflow-hidden bg-slate-800/50 border border-slate-700 group-hover/cert:border-cyan-400/50 transition-all duration-300">
+                          <img 
+                            src="/YuvaAI certificate.png" 
+                            alt="YuvaAI Certificate"
+                            className="w-full h-full object-cover object-center transform group-hover/cert:scale-110 transition-transform duration-500"
+                          />
+                        </div>
+                        
+                        {/* Certificate Title */}
+                        <h3 className="text-xl font-bold text-white mb-2 group-hover/cert:text-cyan-400 transition-colors duration-300">
+                          YuvaAI Certificate
+                        </h3>
+                        
+                        {/* Issuer */}
+                        <div className="flex items-center gap-2 mb-3">
+                          <div className="w-5 h-5 bg-cyan-500/20 rounded-full flex items-center justify-center">
+                            <span className="text-cyan-400 text-xs">🏢</span>
+                          </div>
+                          <span className="text-cyan-400 text-sm font-medium">YuvaAI Program</span>
+                        </div>
+                        
+                        {/* Date */}
+                        <div className="flex items-center gap-2 mb-4">
+                          <div className="w-5 h-5 bg-teal-500/20 rounded-full flex items-center justify-center">
+                            <span className="text-teal-400 text-xs">📅</span>
+                          </div>
+                          <span className="text-slate-400 text-sm">Certified Participant</span>
+                        </div>
+                        
+                        {/* Description */}
+                        <p className="text-slate-400 text-sm leading-relaxed mb-4">
+                          Recognition for participation and completion of the YuvaAI program focused on youth empowerment through AI education.
+                        </p>
+                        
+                        {/* View Certificate Button */}
+                        <a
+                          href="/YuvaAI certificate.png"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-600 to-teal-600 text-white text-sm font-semibold rounded-lg hover:from-cyan-500 hover:to-teal-500 transition-all duration-300 transform hover:scale-105"
+                        >
+                          <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                          </svg>
+                          View Certificate
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
           </div>
         </div>
       </main>

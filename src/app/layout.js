@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Iqfat Shaikh - Frontend Developer",
   description: "Professional portfolio of Iqfat Shaikh, a passionate Frontend Developer specializing in modern web technologies like React, Next.js, and Tailwind CSS.",
+  icons: {
+    icon: '/favicon.png',
+  },
 };
 
 export default function RootLayout({ children }) {

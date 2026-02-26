@@ -19,13 +19,13 @@ export default function ProjectsSection() {
       delay: 0
     },
     {
-      title: 'Car Game',
-      description: 'An interactive car racing game with smooth controls and engaging gameplay mechanics.',
-      techStack: ['JavaScript', 'HTML5 Canvas', 'Tailwind CSS', 'Game Logic'],
-      image: '/carGame.png',
+      title: 'Snapdeal Clone',
+      description: 'A Figma design project - complete e-commerce UI/UX design clone of Snapdeal with modern interface.',
+      techStack: ['Figma', 'UI/UX Design', 'Prototyping'],
+      image: '/snapdeal.png',
       demoUrl: '#',
-      githubUrl: 'https://github.com/IqfatShaikh/car-game.git',
-      gradient: 'from-green-500 to-teal-600',
+      figmaUrl: 'https://www.figma.com/design/hCnIVmrqzciSrwNvXonwhh/Animations?node-id=827-1078&t=IiLYQFU7aoJ8nndB-1',
+      gradient: 'from-purple-500 to-pink-600',
       delay: 200
     },
     {
@@ -39,13 +39,13 @@ export default function ProjectsSection() {
       delay: 400
     },
     {
-      title: 'Snapdeal Clone',
-      description: 'A Figma design project - complete e-commerce UI/UX design clone of Snapdeal with modern interface.',
-      techStack: ['Figma', 'UI/UX Design', 'Prototyping'],
-      image: '/snapdeal.png',
+      title: 'Car Game',
+      description: 'An interactive car racing game with smooth controls and engaging gameplay mechanics.',
+      techStack: ['JavaScript', 'HTML5', 'Tailwind CSS'],
+      image: '/carGame.png',
       demoUrl: '#',
-      figmaUrl: 'https://www.figma.com/design/hCnIVmrqzciSrwNvXonwhh/Animations?node-id=827-1078&t=GmR2LgGROKGg481W-1',
-      gradient: 'from-purple-500 to-pink-600',
+      githubUrl: 'https://github.com/IqfatShaikh/car-game.git',
+      gradient: 'from-green-500 to-teal-600',
       delay: 600
     }
   ];
@@ -77,140 +77,176 @@ export default function ProjectsSection() {
     <section 
       ref={sectionRef}
       id="projects" 
-      className="py-20 bg-gradient-to-br from-gray-800 via-slate-700 to-gray-900 relative overflow-hidden"
+      className="py-20 bg-gradient-to-br from-slate-950 via-indigo-950 to-purple-950 relative overflow-hidden"
     >
-      {/* Animated background elements */}
+      {/* Enhanced animated background */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-green-500/5 rounded-full blur-3xl animate-pulse delay-500"></div>
+        {/* Animated mesh gradient with multiple layers */}
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-600/10 via-purple-600/10 to-pink-600/10 animate-pulse"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tl from-cyan-500/5 via-blue-500/5 to-purple-500/5 animate-gradient-x"></div>
         
-        {/* Grid pattern overlay */}
-        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+        {/* Multiple floating orbs with different animations */}
+        <div className="absolute top-20 left-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-20 right-20 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl animate-float" style={{animationDelay: '1s', animationDuration: '8s'}}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-pink-500/15 rounded-full blur-3xl animate-float" style={{animationDelay: '0.5s', animationDuration: '10s'}}></div>
+        <div className="absolute top-40 right-40 w-64 h-64 bg-cyan-500/15 rounded-full blur-3xl animate-float" style={{animationDelay: '2s', animationDuration: '12s'}}></div>
         
-        {/* Floating particles */}
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-emerald-400 rounded-full animate-ping delay-700"></div>
-        <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-teal-400 rounded-full animate-ping delay-1000"></div>
-        <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-green-400 rounded-full animate-ping delay-300"></div>
+        {/* Animated grid with glow */}
+        <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+        
+        {/* More glowing particles */}
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
+        <div className="absolute top-3/4 right-1/4 w-2 h-2 bg-purple-400 rounded-full animate-ping" style={{animationDelay: '0.7s'}}></div>
+        <div className="absolute bottom-1/3 left-1/3 w-2 h-2 bg-pink-400 rounded-full animate-ping" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-cyan-400 rounded-full animate-ping" style={{animationDelay: '1.5s'}}></div>
+        <div className="absolute bottom-1/4 right-1/2 w-1.5 h-1.5 bg-blue-300 rounded-full animate-ping" style={{animationDelay: '0.3s'}}></div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-20">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 relative">
-              <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-green-400 bg-clip-text text-transparent animate-gradient-x">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 relative inline-block">
+              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient-x drop-shadow-2xl">
                 Featured Projects
               </span>
-              {/* Animated underline */}
-              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full animate-pulse"></div>
+              {/* Enhanced glowing underline with animation */}
+              <div className="absolute -bottom-3 left-0 right-0 h-1.5 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full shadow-2xl shadow-purple-500/60 animate-pulse"></div>
+              {/* Additional glow layer */}
+              <div className="absolute -bottom-3 left-0 right-0 h-1.5 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-full blur-sm opacity-75"></div>
             </h2>
           </div>
           <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <p className="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
-              Here are some of my recent projects that showcase my skills and passion for 
-              <span className="text-emerald-400 font-semibold"> frontend development</span>
+            <p className="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed mt-8">
+              Explore my latest work showcasing 
+              <span className="text-blue-400 font-bold"> innovative solutions</span>, 
+              <span className="text-purple-400 font-bold"> modern design</span>, and 
+              <span className="text-pink-400 font-bold"> clean code</span>
             </p>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-10">
           {projects.map((project, index) => (
             <div
               key={index}
-              className={`group transform transition-all duration-700 ${
+              className={`group perspective-1000 ${
                 animatedCards.includes(index) 
-                  ? 'opacity-100 translate-y-0 scale-100' 
-                  : 'opacity-0 translate-y-8 scale-95'
+                  ? 'opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-10'
               }`}
               style={{ 
-                transitionDelay: animatedCards.includes(index) ? '0ms' : `${project.delay}ms`
+                transitionDelay: animatedCards.includes(index) ? '0ms' : `${project.delay}ms`,
+                transition: 'all 0.7s ease-out'
               }}
             >
-              <div className="bg-slate-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-emerald-500/25 transform hover:-translate-y-2 transition-all duration-500 border border-slate-700 hover:border-emerald-400 relative group-hover:scale-105">
+              <div className="relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-2xl rounded-3xl overflow-hidden border-2 border-slate-700/50 hover:border-purple-500/70 transition-all duration-700 transform hover:-translate-y-2 shadow-2xl hover:shadow-purple-500/40 group-hover:shadow-[0_20px_60px_-15px_rgba(168,85,247,0.4)]">
                 
-                {/* Project Image with enhanced gradient */}
-                <div className="h-48 bg-slate-700 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                {/* Enhanced glowing border effect with multiple layers */}
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-500/0 via-purple-500/30 to-pink-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-2xl"></div>
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-400/20 via-purple-400/20 to-pink-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                {/* Animated corner accents */}
+                <div className="absolute top-0 left-0 w-20 h-20 bg-gradient-to-br from-blue-500/40 to-transparent rounded-br-full opacity-0 group-hover:opacity-100 transition-all duration-500 blur-sm"></div>
+                <div className="absolute bottom-0 right-0 w-20 h-20 bg-gradient-to-tl from-pink-500/40 to-transparent rounded-tl-full opacity-0 group-hover:opacity-100 transition-all duration-500 blur-sm"></div>
+                
+                {/* Project Image Section */}
+                <div className="relative h-64 overflow-hidden">
+                  {/* Enhanced gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent z-10"></div>
                   
-                  {/* Project Image */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <img 
-                      src={project.image} 
-                      alt={project.title}
-                      className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-90 transition-opacity duration-300 group-hover:scale-105 transform transition-transform duration-500"
-                    />
+                  {/* Image with enhanced zoom */}
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-1000 ease-out"
+                  />
+                  
+                  {/* Animated overlay with shimmer */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 via-purple-500/30 to-pink-500/30 opacity-0 group-hover:opacity-100 transition-opacity duration-700 mix-blend-overlay"></div>
+                  
+                  {/* Shimmer effect */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1500"></div>
                   </div>
                   
-                  {/* Animated particles */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <div className="absolute top-4 right-4 w-2 h-2 bg-white rounded-full animate-ping"></div>
-                    <div className="absolute bottom-6 left-6 w-1 h-1 bg-cyan-300 rounded-full animate-ping delay-300"></div>
-                    <div className="absolute top-1/2 right-6 w-1.5 h-1.5 bg-purple-300 rounded-full animate-ping delay-700"></div>
-                  </div>
-                  
-                  {/* Ripple effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-shimmer"></div>
+                  {/* Enhanced corner glows */}
+                  <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-purple-400/40 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl"></div>
+                  <div className="absolute bottom-0 left-0 w-40 h-40 bg-gradient-to-tr from-blue-400/40 to-transparent rounded-tr-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl"></div>
                 </div>
 
-                <div className="p-6 relative z-10">
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-emerald-300 transition-colors duration-300">
+                {/* Content Section */}
+                <div className="relative p-8 space-y-5">
+                  {/* Title with enhanced styling */}
+                  <h3 className="text-3xl font-bold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:via-purple-400 group-hover:to-pink-400 group-hover:bg-clip-text transition-all duration-500">
                     {project.title}
                   </h3>
-                  <p className="text-slate-400 mb-4 leading-relaxed group-hover:text-slate-300 transition-colors duration-300">
+                  
+                  {/* Description with better styling */}
+                  <p className="text-slate-300 leading-relaxed text-base group-hover:text-slate-200 transition-colors duration-300">
                     {project.description}
                   </p>
 
-                  {/* Enhanced Tech Stack */}
-                  <div className="flex flex-wrap gap-2 mb-6">
+                  {/* Tech Stack with enhanced badges */}
+                  <div className="flex flex-wrap gap-3 pt-3">
                     {project.techStack.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-3 py-1 bg-slate-700 text-emerald-400 text-sm rounded-full font-medium border border-slate-600 hover:border-emerald-400 hover:bg-slate-600 transition-all duration-300 hover:scale-105"
+                        className="px-5 py-2.5 bg-gradient-to-r from-slate-700/60 to-slate-800/60 backdrop-blur-sm text-blue-300 text-sm rounded-full font-semibold border border-slate-600/50 hover:border-purple-400/70 hover:bg-gradient-to-r hover:from-blue-900/30 hover:to-purple-900/30 hover:text-purple-300 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-purple-500/30 transform"
                       >
                         {tech}
                       </span>
                     ))}
                   </div>
 
-                  {/* Enhanced Action Buttons */}
-                  <div className="flex gap-4">
+                  {/* Enhanced Action Button */}
+                  <div className="pt-5">
                     <a
                       href={project.figmaUrl || project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full px-4 py-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-lg font-medium hover:from-teal-600 hover:to-green-600 transform hover:scale-105 transition-all duration-300 text-center relative overflow-hidden group/btn"
+                      className="group/btn inline-flex items-center justify-center w-full px-8 py-5 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-500 hover:via-purple-500 hover:to-pink-500 text-white font-bold text-lg rounded-2xl transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/60 relative overflow-hidden"
                     >
-                      <span className="relative z-10 flex items-center justify-center">
-                        <svg className="w-4 h-4 mr-2 group-hover/btn:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      <span className="relative z-10 flex items-center">
+                        <svg className="w-6 h-6 mr-3 group-hover/btn:rotate-45 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
-                        {project.figmaUrl ? 'Figma' : 'Source Code'}
+                        {project.figmaUrl ? 'View Design' : 'View Code'}
                       </span>
-                      {/* Button ripple effect */}
-                      <div className="absolute inset-0 bg-white/20 scale-0 group-hover/btn:scale-100 transition-transform duration-500 opacity-0 group-hover/btn:opacity-100 rounded-lg"></div>
+                      {/* Enhanced button shine effect */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000"></div>
+                      {/* Pulsing glow */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-400/0 via-purple-400/20 to-pink-400/0 opacity-0 group-hover/btn:opacity-100 animate-pulse"></div>
                     </a>
                   </div>
                 </div>
+                
+                {/* Enhanced bottom accent line */}
+                <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left shadow-lg shadow-purple-500/50"></div>
+                
+                {/* Additional animated accent */}
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-right opacity-60"></div>
               </div>
             </div>
           ))}
         </div>
 
         {/* Call to action */}
-        <div className={`text-center mt-12 transition-all duration-1000 delay-1000 ${
+        <div className={`text-center mt-16 transition-all duration-1000 delay-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
         }`}>
-          <p className="text-slate-400 text-sm animate-pulse mb-4">
+          <p className="text-slate-300 text-base animate-pulse mb-6 font-medium">
             Want to see more projects?
           </p>
           <a
-            href="#contact"
-            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-lg font-medium hover:from-teal-600 hover:to-green-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-emerald-500/25"
+            href="/contact"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white rounded-2xl font-bold text-lg hover:from-blue-500 hover:via-purple-500 hover:to-pink-500 transform hover:scale-110 transition-all duration-500 shadow-2xl hover:shadow-purple-500/60 relative overflow-hidden group"
           >
-            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            <svg className="w-6 h-6 mr-3 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
             </svg>
             Let's Work Together
+            {/* Button shine */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
           </a>
         </div>
       </div>
