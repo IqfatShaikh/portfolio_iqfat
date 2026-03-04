@@ -134,14 +134,13 @@ export default function ProjectsSection() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className={`group perspective-1000 ${
+              className={`group perspective-1000 transition-all duration-700 ease-out ${
                 animatedCards.includes(index) 
                   ? 'opacity-100 translate-y-0' 
                   : 'opacity-0 translate-y-10'
               }`}
               style={{ 
-                transitionDelay: animatedCards.includes(index) ? '0ms' : `${project.delay}ms`,
-                transition: 'all 0.7s ease-out'
+                transitionDelay: animatedCards.includes(index) ? '0ms' : `${index * 100}ms`
               }}
             >
               <div className="relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-2xl rounded-2xl overflow-hidden border-2 border-slate-700/50 hover:border-purple-500/70 transition-all duration-700 transform hover:-translate-y-2 shadow-2xl hover:shadow-purple-500/40 group-hover:shadow-[0_20px_60px_-15px_rgba(168,85,247,0.4)]">
